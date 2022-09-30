@@ -15,12 +15,10 @@ public class Profile {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
-    private String id;
+    private Long id;
 
     private String image;
     private String phone;
     private String user;
- // private Date updatedAt;
- // private Date createdAt;
 
 }

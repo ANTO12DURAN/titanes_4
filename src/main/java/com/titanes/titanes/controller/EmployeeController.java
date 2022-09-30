@@ -16,10 +16,8 @@ public class EmployeeController {
 
     @PostMapping("/employee")
     private void createEmployee(@RequestBody Employee employee){
-            employeeService.createEmployee(employee);
+        employeeService.createEmployee(employee);
     }
-
-
 
     @PutMapping("employee")
     private void updateEmployee(@RequestBody Employee employee){
