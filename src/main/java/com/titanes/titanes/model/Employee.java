@@ -4,6 +4,7 @@ import com.titanes.titanes.enums.Enum_RoleName;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @AllArgsConstructor
@@ -35,6 +36,7 @@ public class Employee {
     @JoinColumn(name = "enterprise_id")
     private Enterprise enterprise; //relacion
 
-
+    @OneToMany(mappedBy="employee")
+    private List<Transaction> listTransaction;
 
 }

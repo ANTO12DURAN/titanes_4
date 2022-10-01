@@ -19,13 +19,9 @@ public class Transaction {
     private String concept;
     private Float amount;
 
-
-
     @ManyToOne
     @JoinColumn(name = "employee_id")
     private Employee employee;
-
-
 
     @ManyToOne
     @JoinColumn(name = "enterprise_id")

@@ -21,4 +21,8 @@ public class Profile {
     private String phone;
     private String user;
 
+    @OneToOne
+    @JoinColumn(name = "employee_id")
+    private Employee employee;
+
 }

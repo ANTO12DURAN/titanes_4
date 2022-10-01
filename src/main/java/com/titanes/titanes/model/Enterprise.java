@@ -3,6 +3,7 @@ package com.titanes.titanes.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @AllArgsConstructor
@@ -23,9 +24,11 @@ public class Enterprise {
     private String phone;
     private String address;
 
+    @OneToMany(mappedBy="enterprise")
+    private List<Employee> listEmployee;
 
-  //  @ManyToOne
-  //  @JoinColumn(name = "transaction_id")
-  //  private Transaction transaction;
+    @OneToMany(mappedBy="enterprise")
+    private List<Transaction> listTransaction;
+
 
 }
